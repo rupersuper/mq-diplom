@@ -346,9 +346,9 @@ a {
 
 /* ----------------Asside---------------- */
 
-.aside-item {
-  /* margin-top: 50px; */
-}
+/* .aside-item {
+  margin-top: 50px;
+} */
 
 .aside__title {
   font-size: 14px;
@@ -499,8 +499,8 @@ a {
   gap: 3px 10px;
 }
 
-.tags__item {
-}
+/* .tags__item {
+} */
 
 .tags__link {
   padding: 6px 10px;

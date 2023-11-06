@@ -9,6 +9,44 @@
 </head>
 
 <body>
+	<div class="popup">
+		<div class="popup__content">
+			<label for="" class="popup__close">&times;</label>
+			<form class="popup__form" action="">
+				<h2 class="popup__title">Ваш Фидбек</h2>
+				<div class="popup__item">
+					<label for="" class="popup__subtitle">Как часто вы заходите на сайт?</label>
+					<select class="form__select" name="" id="">
+						<option value="">Почти каждый день</option>
+						<option value="">Раз в несколько дней</option>
+						<option value="">Раз в несколько недель</option>
+						<option value="">Несколько раз в год</option>
+					</select>
+				</div>
+				<div class="popup__item">
+					<fieldset class="popup__checkbox">
+						<legend class="popup__subtitle">Вы подписаны на e-mail рассылку?</legend>
+						<div class="radio">
+							<input class="popup__radio visually-hidden" type="radio" name="newsletter" id="yes">
+							<label class="popup__label" for="yes">Да</label>
+						</div>
+						<div class="radio">
+							<input class="popup__radio visually-hidden" type="radio" name="newsletter" id="no">
+							<label class="popup__label" for="no">Нет</label>
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="popup__item">
+					<label for="" class="popup__subtitle">Расскажите, какой контент вы хотели бы видеть на нашем
+						сайте?
+					</label>
+					<textarea class="popup__input" placeholder="Может, больше рецептов?"></textarea>
+				</div>
+				<button class="btn">Отправить</button>
+			</form>
+		</div>
+	</div>
 	<header class="banner">
 		<div class="container">
 			<div class="header__wrapper">
@@ -451,7 +489,7 @@
 					<label for="" class="email__group">
 						<input type="email" class="email__input" placeholder="Ваш email-адрес">
 					</label>
-					<button class="subscribe__button">Подписаться</button>
+					<button class="btn">Подписаться</button>
 				</form>
 			</section>
 
@@ -545,7 +583,8 @@
 				<div class="product__info">
 					<h3 class="product__title">Подушки на диван</h3>
 					<p class="product__discription">
-						Набор из двух подушек с модными принтами. Видео о создании <a href="#" class="product__link">здесь</a>.
+						Набор из двух подушек с модными принтами. Видео о создании <a href="#"
+							class="product__link">здесь</a>.
 					</p>
 					<div class="product__action">
 						<div class="product__prices">
@@ -569,7 +608,8 @@
 				<div class="product__info">
 					<h3 class="product__title">Кукла "Зайчик"</h3>
 					<p class="product__discription">
-						Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a href="#" class="product__link">весенняя серия
+						Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a href="#"
+							class="product__link">весенняя серия
 							постов</a> в блоге и несколько подкастов.
 					</p>
 					<div class="product__action">
@@ -594,7 +634,8 @@
 				<div class="product__info">
 					<h3 class="product__title">Шестиугольная рамка</h3>
 					<p class="product__discription">
-						Необычная рамка для украшения дома из видео <a href="#" class="product__link">"Как сделать рамку из подручных средств за 30
+						Необычная рамка для украшения дома из видео <a href="#" class="product__link">"Как сделать рамку
+							из подручных средств за 30
 							минут"</a>
 					</p>
 					<div class="product__action">

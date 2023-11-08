@@ -49,14 +49,16 @@ a {
 }
 
 .popup {
-  width: 100%;
-  height: 100%;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .popup__form {
@@ -67,30 +69,36 @@ a {
 
 .popup__content {
   position: relative;
+
+  box-sizing: border-box;
   width: 390px;
   height: 590px;
-  background-color: #ffffff;
   padding: 50px 30px;
-  box-sizing: border-box;
+
+  background-color: #ffffff;
 }
 
 .popup__close {
-  cursor: pointer;
   position: absolute;
-  color: #ffffff;
-  font-size: 40px;
   top: -50px;
   right: 0px;
+
+  font-size: 40px;
+
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .popup__title {
   font-size: 20px;
   font-weight: 700;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .popup__title::after {
+  content: "";
+
   position: relative;
 
   display: block;
@@ -100,22 +108,22 @@ a {
   margin-top: 8px;
 
   background: #b59f5b;
-
-  content: "";
 }
 
 .form__select {
   width: 100%;
   height: 50px;
   padding: 15px 20px;
-  border: none;
+
   -webkit-appearance: none;
   -moz-appearance: none;
+
   background: url(../svg/form-arrows.svg);
   background-repeat: no-repeat;
   background-size: 10px;
   background-color: #f4f7f6;
   background-position: right 10px bottom 16px;
+  border: none;
 }
 
 .form__select:focus {
@@ -123,54 +131,60 @@ a {
 }
 
 .popup__subtitle {
-  margin-bottom: 10px;
   display: inline-block;
+  margin-bottom: 10px;
+  padding: 0;
+
   font-size: 13px;
   line-height: 1.2;
-  padding: 0;
 }
 
 .popup__checkbox {
   display: flex;
   gap: 15px;
-  border: none;
   padding: 0;
+
+  border: none;
 }
 
 .radio {
   position: relative;
 }
 
-.popup__radio {
-}
-
 .popup__label {
-  cursor: pointer;
   display: inline-block;
   padding-left: 22px;
-  font-size: 13px;
   vertical-align: top;
+
+  font-size: 13px;
+  cursor: pointer;
 }
 
 .popup__label:before {
   content: "";
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+
   display: inline-block;
   width: 16px;
   height: 16px;
 
-  border: 1px solid #b59f5b;
   background-color: #fff;
+  border: 1px solid #b59f5b;
   border-radius: 50%;
-
-  position: absolute;
-  top: 0;
-  left: 0;
 
   transition: border 0.1s linear;
 }
 
 .popup__label:after {
   content: "";
+
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  
   display: block;
   width: 12px;
   height: 12px;
@@ -178,10 +192,6 @@ a {
   background-color: #b59f5b;
   border-radius: 50%;
   opacity: 0;
-
-  position: absolute;
-  top: 3px;
-  left: 3px;
 
   transition: opacity 0.1s linear;
 }
@@ -196,16 +206,18 @@ a {
 }
 
 .popup__input {
-  font-family: "OpenSans", sans-serif;
-  font-size: 13px;
+  box-sizing: border-box;
   min-width: 100%;
   max-width: 100%;
   min-height: 130px;
+  padding: 20px;
+
+  font-family: "OpenSans", sans-serif;
+  font-size: 13px;
+
+  background-color: #f4f7f6;
   resize: none;
   border: none;
-  padding: 20px;
-  background-color: #f4f7f6;
-  box-sizing: border-box;
 }
 
 .popup__input:focus {
@@ -217,7 +229,9 @@ a {
 
 .banner {
   position: relative;
+
   height: 523px;
+
   background: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg)
     no-repeat;
   background-color: #6d6c69;
@@ -226,14 +240,17 @@ a {
 }
 
 .banner::after {
+  content: "";
+
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 523px;
+
   background-color: #000;
   opacity: 0.6;
-  content: "";
 }
 
 .container {
@@ -244,11 +261,12 @@ a {
 
 .header__wrapper {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 28px 0;
   z-index: 1;
+
+  display: flex;
+  padding: 28px 0;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__logo img {
@@ -274,6 +292,8 @@ a {
 }
 
 .header__link::before {
+  content: "";
+
   position: absolute;
   bottom: -2px;
   right: 0;
@@ -284,7 +304,6 @@ a {
 
   background-color: #ffffff;
   opacity: 0;
-  content: "";
 }
 
 .header__link:hover::before {
@@ -294,34 +313,42 @@ a {
 
 .header__title {
   position: relative;
+  z-index: 1;
+
   max-width: 700px;
   margin: 98px auto 0 auto;
-  z-index: 1;
+
   font-size: 45px;
   font-weight: 700;
   line-height: 75px;
   text-transform: uppercase;
   text-align: center;
+
   color: #ffffff;
 }
 
 .menu-icon {
+  position: relative;
+  z-index: 5;
+
   display: none;
   height: 17px;
   width: 22px;
-  position: relative;
+
   cursor: pointer;
-  z-index: 5;
 }
 
 .menu-icon span {
-  transition: all 0.3s ease 0s;
+  position: absolute;
   top: calc(50% - 1.5px);
   left: 0;
-  position: absolute;
+
   width: 100%;
   height: 3px;
-  background-color: #fff;
+
+  background-color: #ffffff;
+
+  transition: all 0.3s ease 0s;
 }
 
 .menu-icon span:first-child {
@@ -332,23 +359,28 @@ a {
   top: auto;
   bottom: 0;
 }
+
 /* ----------------/Header---------------- */
 
 /* ----------------Trends Section---------------- */
+
 .trends {
   margin-bottom: 60px;
 }
 
 .trends__title {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  
+  font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 60px;
-  margin-bottom: 30px;
-  font-size: 24px;
 }
 
 .trends__title::after {
+  content: "";
+
   position: relative;
 
   display: block;
@@ -358,8 +390,6 @@ a {
   margin-top: 14px;
 
   background: #b59f5b;
-
-  content: "";
 }
 
 .trends__wrapper {
@@ -369,19 +399,21 @@ a {
 
 .trends__block {
   position: relative;
+
   display: flex;
   align-items: flex-end;
-  padding: 17px 25px;
-  position: relative;
   width: 100%;
   height: 320px;
+  padding: 17px 25px;
 }
 
 .wrp {
+  z-index: 2;
+
   width: 100%;
   padding: 35px;
+
   border: 2px solid #b59f5b;
-  z-index: 2;
 }
 
 .trends__image1 {
@@ -401,14 +433,17 @@ a {
 }
 
 .trends__block::after {
+  content: "";
+
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
+
   background-color: #000;
   opacity: 0.6;
-  content: "";
 }
 
 .trends__tags {
@@ -422,13 +457,16 @@ a {
 }
 
 .block__title-link {
-  font-weight: 700;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #ffffff;
   position: relative;
   z-index: 2;
+
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: #ffffff;
 }
+
 /* ----------------Trends Section---------------- */
 
 /* ----------------Main Posts---------------- */
@@ -441,9 +479,9 @@ a {
 }
 
 .main__asside {
-  width: 300px;
   display: flex;
   flex-direction: column;
+  width: 300px;
   gap: 50px;
 }
 
@@ -494,6 +532,8 @@ a {
 }
 
 .tag__link::after {
+  content: "";
+
   position: relative;
   top: -3px;
 
@@ -502,7 +542,6 @@ a {
 
   background: #b59f5b;
   opacity: 0;
-  content: "";
 }
 
 .tag__link:hover::after {
@@ -520,6 +559,7 @@ a {
   font-weight: 700;
   line-height: 24px;
   text-transform: uppercase;
+
   color: #000000;
 }
 
@@ -551,10 +591,6 @@ a {
 
 /* ----------------Asside---------------- */
 
-/* .aside-item {
-  margin-top: 50px;
-} */
-
 .aside__title {
   font-size: 14px;
   font-weight: 700;
@@ -579,9 +615,9 @@ a {
 }
 
 .new-posts__list {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
   gap: 18px;
 }
 
@@ -599,6 +635,7 @@ a {
   font-size: 12px;
   font-weight: 400;
   text-align: left;
+
   color: rgba(0, 0, 0, 0.541);
 }
 
@@ -614,8 +651,8 @@ a {
 }
 
 .search {
-  align-items: flex-end;
   display: flex;
+  align-items: flex-end;
   width: 100%;
 }
 
@@ -648,6 +685,7 @@ a {
 .search__button {
   width: 47px;
   height: 47px;
+
   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
   background-repeat: no-repeat;
   background-size: 16px;
@@ -778,16 +816,19 @@ a {
 }
 
 .product__info {
-  border: 3px solid #d3c59d;
-  padding: 30px 20px;
-  margin-top: -35px;
   position: relative;
+
   flex-grow: 1;
   width: 300px;
+  margin-top: -35px;
+  padding: 30px 20px;
+
+  border: 3px solid #d3c59d;
 }
 
 .product__title {
   margin-top: 10px;
+
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
@@ -808,10 +849,10 @@ a {
 }
 
 .product__action {
-  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  margin-top: 20px;
   align-items: flex-end;
+  justify-content: space-between;
 }
 
 .product__price {
@@ -874,6 +915,7 @@ a {
   display: inline-block;
   width: 24px;
   height: 24px;
+
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 20px;
@@ -959,9 +1001,9 @@ a {
   }
 
   .header__title {
+    margin-top: 200px;
     font-size: 26px;
     line-height: 1.5;
-    margin-top: 200px;
   }
   .banner {
     background-position: 25% 25%;
@@ -971,9 +1013,11 @@ a {
   }
   .header__logo {
     position: absolute;
-    margin: 0 auto;
     top: 200px;
     left: 50%;
+
+    margin: 0 auto;
+    
     transform: translate(-50%, -50%);
   }
   .header__menu {
